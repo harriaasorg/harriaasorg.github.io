@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-bar {
+    background-color: rgb(34, 139, 34);
+    width: 100%;
+		position: sticky; !!
+		z-index: 9999;
+}
+
+.nav-bar ul img {
+    height: 75px;
+    display: inline;
+    vertical-align: middle;
+}
+
+.nav-bar ul li {
+    display: inline;
+    padding: 1em;
+    color: #1f1f1f;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    float:right;
+    text-align:middle;
+}
+
+.nav-bar ul {
+    padding: 0;
+    background-color: rgb(34, 139, 34);
+    padding: 20px;
+}
+
+.nav-bar ul a {
+    text-decoration: none;
+}
+
+.nav-bar ul a :hover {
+    color: #dddddd;
+}
+
+.main-section {
+    background-image: url(https://i.imgur.com/2EAAVNn.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+		justify-content: center;
+		width: 100%;
+}
+
+.main-section , p {
+    text-align: center;
+    padding: 10px;
+    color: #dddddd;
+    font-size: 25px;
+}
+
+.main-section h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: xx-large;
+    color:black;
+    display:inline;
+    vertical-align:middle;
+    line-height:35px;
+}
+
+.main-section button {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid rgb(34, 139, 34);
+    border-radius: 10px;
+    color: #dddddd;
+    background-color: rgb(34, 139, 34);
+    padding: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+		font-size: 25px;
+		transition: .25s all ease;
+}
+
+.main-section button:hover {
+    border: 1px solid rgb(34, 139, 34);
+    border-radius: 10px;
+    background-color: #dddddd;
+    color: #008bf8;
+}
+
+.about-section{
+	/* height: 100vh; */
+	min-height: 700px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.about-section p{
+	margin-bottom: 40px;
+	color: #1f1f1f;
+    font-stretch: condensed;
+}
+
+.about-section a {
+	border: 1px solid rgb(34, 139, 34);
+	border-radius: 10px;
+	color: #dddddd;
+	background-color: rgb(34, 139, 34);
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 25px;
+	transition: .25s all ease;
+	text-decoration: none;
+}
+
+.about-section a:hover {
+	border: 1px solid rgb(34, 139, 34);
+	border-radius: 10px;
+	background-color: #dddddd;
+	color: rgb(34, 139, 34);
+}
+
+.about-inner {
+	margin: 0 20em;
+}
+
+.right {
+	float: right;
+	border: 3px solid rgb(34, 139, 34);
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px;
+    margin-bottom: 50px;
+    margin-right: 35%;
+}
+
+.right h1 {
+    text-align: left;
+    padding: 10px;
+    display: block;
+}
+
+.left h1 {
+    text-align: right;
+    padding: 10px;
+    display: block;
+}
+
+.right p {
+    color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left p {
+    color: #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    height: 300px;
+}
+
+.right img {
+    height: 300px;
+}
+
+.right div {
+    display: flex;
+}
+
+.left div {
+    display: flex;
+}
+
+.left {
+	float: left;
+	border: 3px solid rgb(34, 139, 34);
+	border-radius: 10px;
+	padding: 20px;
+	margin: 20px;
+    margin-bottom: 50px;
+    margin-left: 35%;
+}
+
+
+}
+
+
+h1 {
+text-align: center;
+    padding: 10px;
+    color: rgb(0,0,0);
+    font-size: 25px;
+}
