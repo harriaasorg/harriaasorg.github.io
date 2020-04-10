@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="shortcut icon" type="image" href="https://i.imgur.com/YFQwIRe.png"/>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles(3).css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    
+    
+    
+   
+ <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Map</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #map {
+            border: 2px solid #333;
+            width: 60vw;
+            height: 60vh;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="nav-bar">
+        <ul>
+            <img src="https://i.imgur.com/xFcii4X.png">
+        </ul>
+    </div>
+
+    
+    <div id="map"></div>
+
+    <script src="./keys.js"></script>
+    <script>
+        let map;
+        document.addEventListener("DOMContentLoaded", () => {
+            let s = document.createElement("script");
+            document.head.appendChild(s);
+            s.addEventListener("load", () => {
+                //script has loaded
+                console.log("script has loaded");
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: {
+                        lat: 45.3496711,
+                        lng: -75.7569551
+                    },
+                    zoom: 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+            });
+            s.src = `https://maps.googleapis.com/maps/api/js?key=${AIzaSyA-Dhdq8zjRrg74yuFEPQLwfsaE4EKDN5s}`;
+        });
+    </script>
+</body>
+
+</html>
