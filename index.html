@@ -2,6 +2,18 @@
 <html lang="en">
 
 <head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166279949-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-166279949-1');
+    </script>
+    
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,7 +25,7 @@
 <body>
     <div class="nav-bar">
         <ul>
-            <img src="https://i.imgur.com/mrpVs6n.png">
+            <img src="https://i.imgur.com/kZhGRdw.png">
             <a href="index.html">
                 <li>Home</li>
             </a>
@@ -38,10 +50,30 @@
 		<div class="about-inner">
 			<h1>About</h1>
             <p>GList in a helpful companion for you when you go to the store. You can create your own lists, use default templates or create your own. The app is highly customizable. The main problem for us was forgetting to buy things from the store and keeping within a limit. Our solution is simple yet very effective and easy to use. Our app can be used by everyone.</p>
-			<a href="https://www.figma.com/proto/4RSYE7sgos2p3QQ01ahHxm/GList?node-id=1%3A2&scaling=scale-down">Figma</a>
+			<a href="https://www.figma.com/proto/4RSYE7sgos2p3QQ01ahHxm/GList?node-id=1%3A2&scaling=scale-down" onclick="onButtonTry";>Figma</a>
 		</div>
 	</div>
 
+    
+    
+    <script>
+    
+    function onButtonFigma() {
+        gtag("event", "Figma");
+        "event_category": "Landing Site"
+    });
+    
+    function onButtonSubscribe() {
+        gtag("event", "Subscribe");
+        
+    }
+    function onButtonTry() {
+        gtag("event", "Facebook");
+        
+    }
+        
+    </script>
+    
     
     
     
@@ -66,8 +98,6 @@
 			</tr>
 			
 		</table>
-
-    
     
     
     
@@ -104,7 +134,8 @@
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_81683b2286b52f79d420a8e32_5cdcd85d4b" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+    onclick="onButtonSubscribe"; class="button"></div>
     </div>
 </form>
 </div>
@@ -114,14 +145,11 @@
     
     
     
-    
-    
-    
 	<div class="footer">
 		<p>Copyright © 2017 All Rights Reserved by Scanfcode.</p>
 		<p class="footer-inner" id="Contacts">Contacts:</p>
 		<p class="footer-inner">Glist@info.com</p>
-		<p class="footer-inner">Facebook.com/Glist</p>
+        <img onclick="onButtonFacebook"; style="height:75px";class="footer-inner" src="https://i.imgur.com/Pdm9kFc.png">
 	</div>
 
 </body>
