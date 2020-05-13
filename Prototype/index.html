@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Prototype</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<div class="cart-modal">
+		<div class="cart-modal-content">
+			<div class="close"><button class="close-b">&times;</button></div>
+			<div class="cart-product-section"></div>
+			<div class="cart-footer">
+				<p>Total Price : <span id="total">0</span></p>
+				<form action="">
+					<p>Budget</p>
+					<input type="number" id="budget">
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<header>
+		<div class="cart" id="cart">
+			<div id="cart-count">0</div>
+			<img src="https://image.flaticon.com/icons/svg/1374/1374128.svg" alt="" class="cart-i">
+		</div>
+	</header>
+	<div class="products-section">
+
+		<div class="product">
+			<div class="image"><img src="https://image.flaticon.com/icons/svg/629/629041.svg" alt=""></div>
+			<h2 class="product-heading">Product 1</h2>
+			<p class="desc">Product Description</p>
+			<p class="price">$12</p>
+			<button class="button" onclick="addProduct(12, 'Product 1')">Add</button>
+		</div>
+
+		<div class="product">
+			<div class="image"><img src="https://image.flaticon.com/icons/svg/629/629041.svg" alt=""></div>
+			<h2 class="product-heading">Product 2</h2>
+			<p class="desc">Product Description</p>
+			<p class="price">$11</p>
+			<button class="button" onclick="addProduct(11, 'Product 2')">Add</button>
+		</div>
+
+		<div class="product">
+			<div class="image"><img src="https://image.flaticon.com/icons/svg/629/629041.svg" alt=""></div>
+			<h2 class="product-heading">Product 3</h2>
+			<p class="desc">Product Description</p>
+			<p class="price">$1</p>
+			<button class="button" onclick="addProduct(1, 'Product 3')">Add</button>
+		</div>
+
+		<div class="product">
+			<div class="image"><img src="https://image.flaticon.com/icons/svg/629/629041.svg" alt=""></div>
+			<h2 class="product-heading">Product 4</h2>
+			<p class="desc">Product Description</p>
+			<p class="price">$4</p>
+			<button class="button" onclick="addProduct(4, 'Product 4')">Add</button>
+		</div>
+
+		<div class="product">
+			<div class="image"><img src="https://image.flaticon.com/icons/svg/629/629041.svg" alt=""></div>
+			<h2 class="product-heading">Product 5</h2>
+			<p class="desc">Product Description</p>
+			<p class="price">$7</p>
+			<button class="button" onclick="addProduct(7, 'Product 5')">Add</button>
+		</div>
+
+		<div class="product">
+			<div class="image"><img src="https://image.flaticon.com/icons/svg/629/629041.svg" alt=""></div>
+			<h2 class="product-heading">Product 6</h2>
+			<p class="desc">Product Description</p>
+			<p class="price">$9</p>
+			<button class="button" onclick="addProduct(9, 'Product 6')">Add</button>
+		</div>
+
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
