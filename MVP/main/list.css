@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background: white;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, .6);
+    text-align: center;
+    padding: 15px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#intro {
+    font-size: 1.1em;
+    color: #753;
+    font-weight: bold;
+}
+
+#userinput {
+    height: 2em;
+    padding: 0 5px;
+}
+
+#userinput:hover {
+    background: #110;
+    color: #fff;
+}
+
+#enter {
+    color: white;
+    height: 2em;
+    width: 6em;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #000000;
+    font-weight: bold;
+}
+
+#enter:hover {
+    background: #fff;
+    color: #fff;
+}
+
+ol {
+    list-style: none;
+}
+
+span {
+    font-size: 1.5em;
+    line-height: 1.8em;
+    position: relative;
+}
+
+span::before,
+span::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+}
+
+
+
+span::after {
+    background: #011112;
+    height: 110%;
+    width: 250px;
+    left: 50%;
+    transform: translateX(-51%);
+    z-index: -3;
+    top: 0em;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.delete {
+    border-radius: 35px;
+    cursor: alias;
+    opacity: 0;
+    transition: opacity ease-in-out 500ms;
+}
+
+li:hover .delete {
+    opacity: 1;
+}
+
+img {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+
+
+body {
+    margin: 0;
+  }
+
+  .navigation {
+    background: skyblue;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .name {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+.menu-list {
+  flex: 3;
+}
+
+  .menu-list ul {
+   list-style: none;
+   text-align: center;
+   padding: 0 10px;
+  }
+
+  .menu-list ul li {
+    display: inline-block;
+  }
+
+  .menu-list ul li a {
+    text-decoration: none;
+    padding: 0 5px;
+  }
+
+.menu-list-right {
+  flex: 1;
+  text-align: right;
+}
+
+.menu-list-right ul {
+  list-style: none;
+  padding: 0 10px;
+  margin: 0;
+}
+
+ .menu-list-right ul li {
+   display: inline-block;
+ }
+
+ .menu-list-right ul li a {
+   text-decoration: none;
+   padding: 0 5px;
+ }
+
+.name, .navbar-center, .navbar-right li {
+  margin: 0;
+}
+
+
+
+
+a:link {
+    text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: darkblue;
+}
+
+/* selected link */
+a:active {
+  color: green;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>GList</title>
+    <link rel="stylesheet" href="list.css">
+  </head>
+  <body>
+      
+      
+      <div class="navigation">
+    <img src="https://i.imgur.com/28TetU4.png" width="50px" height="40px" style="margin-left:10px">
+      <div class="menu-list">
+       <!-- Center Nav -->
+        <ul class="navbar-center">
+          
+    </ul>
+  </div>
+
+      <div class="menu-list-right">
+        <ul class="navbar-right">
+        <!-- Right nav -->
+          
+          <li><a style="font-size: 20px;" href="">Profile</a></li>
+      </div>
+  </div>
+      
+      
+    <div class="container">
+        <h1 style="text-align: left;">Grocery list 1</h1>
+  
+        <input id="userinput" type="text" placeholder="enter item">
+        <button id="enter">Add</button>
+        <label for="cars">Sort by</label>
+
+
+          <select>
+            <option>Date</option>
+            <option>Name</option>
+            <option>Item count</option>
+          </select>
+        <ul>
+            <li><span>Milk</span></li>
+            <li><span>Bread</span></li>
+            <li><span>Cookies</span></li>
+        </ul>
+    </div>
+    
+
+<button style="margin-left: 450px;" style="width:100px;" style="height=:100px;" onclick="goBack()">Back</button>
+
+
+  <script> var button = document.getElementById("enter");
+    var input = document.getElementById("userinput");
+    var ul = document.querySelector("ul");
+    //Select all the initial lis
+    var lis = document.querySelectorAll("li");
+    //Create a variable for future delete buttons
+    var deleteButton;
+
+    //Return Length of input
+    function inputLength() {
+        return input.value.length;
+    }
+
+    //Create delete buttons and append it to their parents(li)
+    function createDeleteButton(parent) {
+        //Create element button
+        var button = document.createElement("button");
+        // Create and append text inside button
+        button.appendChild(document.createTextNode("X"));
+        // Give class=delete to buttons - Its's going to be used to select them in the future
+        button.className = "delete";
+        // append or insert the button to the parent element(li)
+        parent.appendChild(button);
+    }
+
+    //Toggle class=done when you invoke the function - use "this" to toggle only the one you selected
+    function toggleDoneClass() {
+        this.classList.toggle("done");
+    }
+
+    //Create the "li" with everything it needs inside of it(text ,button, class)
+    function createListElement() {
+        //Create "li"
+        var li = document.createElement("li");
+        var span = document.createElement("span");
+        // Create text for the li according to what you put in the input
+        li.appendChild(span);
+        span.appendChild(document.createTextNode(input.value));
+        // Append or insert the new li to the ul
+        ul.appendChild(li);
+
+        //Create the delete button calling the funtion with the new li
+        createDeleteButton(li);
+        //Updates the selector to the new number of buttons with class=delete
+        deleteButton = document.querySelectorAll(".delete")
+
+        //Applies the functionality to remove the li
+        updateDeleteButtons()
+
+        //add the click listener to toggle class=done
+        li.addEventListener('click', toggleDoneClass)
+
+        //Makes the input go back to blank when this function is done
+        input.value = "";
+    }
+
+
+    function addListAfterClick() {
+        if (inputLength() > 0) {
+            createListElement();
+        }
+    }
+
+    function addListAfterKeypress(event) {
+        if (inputLength() > 0 && event.keyCode === 13) {
+            createListElement();
+        }
+    }
+
+    //Applies the functionality to remove the li to all the buttons(new and old)
+    function updateDeleteButtons() {
+        for (var i = 0; i < deleteButton.length; i++) {
+            deleteButton[i].addEventListener("click", function() {
+                this.parentNode.remove()
+            })
+        }
+    }
+
+    button.addEventListener("click", addListAfterClick);
+
+    input.addEventListener("keypress", addListAfterKeypress);
+    //INIT
+    //Add the event listener and create the delete buttons to the initial lis
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].addEventListener('click', toggleDoneClass);
+
+        createDeleteButton(lis[i])
+    }
+    //Selector of initial buttons with class=delete
+    deleteButton = document.querySelectorAll(".delete")
+    //It gives the buttons with class the function to remove the li(todo)
+    updateDeleteButtons()
+
+
+
+
+
+
+function goBack() {
+  window.history.back();
+}
+
+
+
+
+    </script>
+  </body>
+</html>
